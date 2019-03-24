@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+    "usingComponents": {},
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor":"#50B4F7",
+    "navigationBarTitleText":"学生考勤系统"
+    
 }

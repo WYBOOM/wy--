@@ -5,6 +5,8 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  height: 100%;
+  width:100%
 }
 
 .userinfo, .uploader, .tunnel {
@@ -22,116 +24,50 @@ page {
 }
 
 .userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
+
+  width: 150rpx;
+  height: 150rpx;
+  margin: 180rpx 0 50rpx 0;
   border-radius: 50%;
   background-size: cover;
   background-color: white;
+  border: white solid 3px
 }
 
-.userinfo-avatar:after {
-  border: none;
+
+
+
+
+input{
+    margin: 20rpx 0;
+    border-bottom: 1rpx solid white;
+    width: 550rpx
 }
 
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.input-view{
+    margin: 100rpx 0 40rpx 0
 }
 
-.userinfo-nickname::after {
-  border: none;
-}
 
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
 
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
+.container{
+    background: linear-gradient(to bottom, rgb(82, 181, 247),rgb(6, 158, 240) );
+    height: 100%;
 }
+.section{
+    width: 80%;
+    color:white;
+    font-size: 20px;
 
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
+.picker{
+    height: 60rpx;
+    width: 100%;
+    line-height: 60rpx;
+    background-color: rgb(124, 196, 245)
 }
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
-}
-
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+button{
+    width: 500rpx;
+    height: 80rpx;
+    margin: 30px;   
 }

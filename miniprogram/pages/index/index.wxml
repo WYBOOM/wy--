@@ -2,40 +2,52 @@
 <view class="container">
 
     <!-- 用户 openid -->
-    <view class="userinfo">
+    <!-- <view class="userinfo">
         <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
         <view>
             <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
         </view>
-    </view>
+    </view> -->
 
 
     <!-- 上传图片 -->
-    <view class="uploader">
+    <!-- <view class="uploader">
         <view class="uploader-text" bindtap="doUpload">
             <text>上传图片</text>
         </view>
         <view class="uploader-container" wx:if="{{imgUrl}}">
             <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
         </view>
-    </view>
+    </view> -->
 
 
     <!-- 操作数据库 -->
-    <view class="uploader">
+    <!-- <view class="uploader">
         <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
             <text>前端操作数据库</text>
         </navigator>
-    </view>
+    </view> -->
 
     <!-- 新建云函数 -->
-    <view class="uploader">
+    <!-- <view class="uploader">
         <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
             <text>快速新建云函数</text>
         </navigator>
+    </view> -->
+    <view style="background-image: url({{avatarUrl}})" class="userinfo-avatar">
     </view>
-
-    <view >
-        <button bindtap='dosomething'>www</button>
+    <text style='color:white'>请登录</text>
+    <view class='input-view'>
+        <input placeholder='请输入账号' placeholder-style='color:white;font-size:16px'></input>
+        <input placeholder='请输入密码' placeholder-style='color:white;font-size:16px'></input>
     </view>
+    <view class="section">
+        <view class="section__title">请选择身份：</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{identify}}">
+            <view class="picker">
+                {{identify[index]}}
+            </view>
+        </picker>
+    </view>
+    <button>登录</button>
 </view>
