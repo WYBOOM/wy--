@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/userConsole/userConsole",
+        "pages/storageConsole/storageConsole",
+        "pages/databaseGuide/databaseGuide",
+        "pages/addFunction/addFunction",
+        "pages/deployFunctions/deployFunctions",
+        "pages/chooseLib/chooseLib"
+    ],
+    "window": {
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "wy test",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/userConsole/userConsole",
+                "text": "我才是首页"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}
