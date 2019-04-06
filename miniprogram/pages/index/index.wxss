@@ -1,73 +1,93 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  width:100%
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
 }
 
 .userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+    margin-top: 40rpx;
+    height: 140rpx;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 300ms ease;
 }
 
 .userinfo-avatar {
-
-  width: 150rpx;
-  height: 150rpx;
-  margin: 180rpx 0 50rpx 0;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-  border: white solid 3px
+    width: 150rpx;
+    height: 150rpx;
+    margin: 180rpx 0 50rpx 0;
+    border-radius: 50%;
+    background-size: cover;
+    background-color: white;
+    border: white solid 3px;
 }
 
-
-
-
-
-input{
-    margin: 20rpx 0;
-    border-bottom: 1rpx solid white;
-    width: 550rpx
+.img {
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 50%;
+    border: 1rpx solid white;
+    margin: 100rpx 0 10rpx 0;
 }
 
-.input-view{
-    margin: 100rpx 0 40rpx 0
+.text {
+    color: white;
+    font-size: 30rpx;
 }
 
-
-
-.container{
-    background: linear-gradient(to bottom, rgb(82, 181, 247),rgb(6, 158, 240) );
+.container {
+    background: linear-gradient(to bottom, rgb(82, 181, 247), rgb(6, 158, 240));
     height: 100%;
 }
-.section{
-    width: 80%;
-    color:white;
-    font-size: 20px;
 
+.absolute {
+    position: absolute;
+    z-index: 100;
+    margin-top: 300rpx;
 }
-.picker{
-    height: 60rpx;
-    width: 100%;
-    line-height: 60rpx;
-    background-color: rgb(124, 196, 245)
-}
-button{
+
+.dialog {
+    display: flex;
+    flex-direction: column;
     width: 500rpx;
-    height: 80rpx;
-    margin: 30px;   
+    background-color: #fafafc;
+    border-radius: 6rpx;
+}
+
+input {
+    margin: 10rpx 60rpx;
+    border-bottom: 1rpx solid rgb(214, 212, 212);
+}
+
+.placeholder {
+    font-size: 26rpx;
+}
+
+button {
+    height: 60rpx;
+    width: 250rpx;
+    display: inline-block;
+    line-height: 60rpx;
+}
+
+.overView {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.726);
+}
+.buttonHover{
+    color:green
 }

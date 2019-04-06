@@ -11,6 +11,8 @@
 	"appid": "wx0676a8da18f6bc10",
 	"projectname": "wytest001",
 	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

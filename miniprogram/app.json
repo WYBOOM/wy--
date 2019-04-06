@@ -1,24 +1,32 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/userConsole/userConsole",
-        "pages/storageConsole/storageConsole",
-        "pages/databaseGuide/databaseGuide",
-        "pages/addFunction/addFunction",
-        "pages/deployFunctions/deployFunctions",
-        "pages/chooseLib/chooseLib"
-    ],
-    "window": {
-        "backgroundColor": "#eeeeee",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#ffffff",
-        "navigationBarTitleText": "wy test",
-        "navigationBarTextStyle": "black"
-    },
-    "networkTimeout": {
-        "request": 10000,
-        "downloadFile": 10000
-    },
-    "debug": true
-}
+  "pages": [
+    "pages/index/index",
+    "pages/studentIndex/studentIndex",
 
+
+
+
+
+
+
+
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "window": {
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "wy test",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}
