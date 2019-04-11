@@ -1,0 +1,27 @@
+<!--miniprogram/pages/teacherIndex/teacherIndex.wxml-->
+<scroll-view class='content' scroll-y='true'>
+    <button type='primary' style='width:90%;margin-top:20rpx' catchtap='createCourse'>创建新的课程</button>
+    <view class='item' wx:for="{{createdCourse}}" wx:key="{{item.className}}">
+        <text style='width:30%;font-size:36rpx;font-weight:500'>{{item.className}}</text>
+        <text style='width:60%;margin-left:20rpx;font-size:36rpx;font-weight:500;color:green'>{{item.courseName}}</text>
+        <text style='width:40%;font-size:23rpx;font-weight:500;color:rgb(179, 173, 173)'>{{item.creationTime}}</text>
+
+     
+    </view>
+
+</scroll-view>
+
+   <view class='overView' hidden='{{isCreate}}'></view>
+    <view class='absolute' hidden="{{isCreate}}">
+        <view class='dialog'>
+            <text style='font-size:29rpx;font-weight:500;margin:30rpx auto;'>请补充相关信息</text>
+            <input placeholder='课程名称：' placeholder-class="placeholder" bindinput='inputCourseName'></input>
+            <input placeholder='班级名称：' placeholder-class="placeholder" bindinput='inputClassName'></input>
+            <text style='font-size:28rpx;margin-left:30rpx'>考勤地点：</text>
+            <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}"  scale="17"     show-location='true'></map>
+            <view style='margin:30rpx 0 -10rpx'>
+                <button catchtap='cancel' hover-class='buttonHover' class='button'>取消</button>
+                <button hover-class='buttonHover' catchtap='studentLogin' class='button'>登录</button>
+            </view>
+        </view>
+    </view>

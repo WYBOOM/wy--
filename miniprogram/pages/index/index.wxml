@@ -50,19 +50,19 @@
             <input placeholder='学号：' placeholder-class="placeholder"></input>
             <view style='margin:30rpx 0 -10rpx'>
                 <button catchtap='cancel' hover-class='buttonHover'>取消</button>
-                <button hover-class='buttonHover' bindtap='studentLogin'>确定</button>
+                <button hover-class='buttonHover' catchtap='studentLogin'>登录</button>
             </view>
         </view>
     </view>
     <view class='absolute' hidden="{{!isTeacher}}">
         <view class='dialog'>
             <text style='font-size:29rpx;font-weight:500;margin:30rpx auto;'>请补充相关信息</text>
-            <input placeholder='课程名称：' placeholder-class="placeholder"></input>
-            <input placeholder='班级名称：' placeholder-class="placeholder"></input>
-            <button hover-class='buttonHover' style='width:calc(100% - 100rpx);margin-top:10rpx;font-size:26rpx;color:green'>已经创建过了，马上去考勤</button>
+            <input placeholder='账号：' placeholder-class="placeholder" value='' bindinput='inputAccountNum'></input>
+            <input placeholder='密码：' placeholder-class="placeholder" value='' bindinput='inputPassWord'></input>
+            <!-- <button hover-class='buttonHover' style='width:calc(100% - 100rpx);margin-top:10rpx;font-size:26rpx;color:green'>已经创建过了，马上去考勤</button> -->
             <view style='margin:30rpx 0 -10rpx'>
                 <button catchtap='cancel' hover-class='buttonHover'>取消</button>
-                <button hover-class='buttonHover'>确定</button>
+                <button hover-class='buttonHover' catchtap='teacherLogin'>登录</button>
             </view>
         </view>
     </view>

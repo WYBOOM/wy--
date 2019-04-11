@@ -1,0 +1,67 @@
+/* miniprogram/pages/teacherIndex/teacherIndex.wxss */
+
+page {
+    display:flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-color:#DDDDDD;
+}
+.item{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30rpx auto 0;
+    padding-top: 6%;
+    width: 95%;
+    height: 100rpx;
+    border-radius:10rpx;
+    background-color:white;
+}
+
+.overView {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+}
+.absolute {
+    position: absolute;
+    z-index: 100;
+    margin: 10% 8%;
+
+}
+.dialog {
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+    background-color: #fafafc;
+    border-radius: 6rpx;
+    height: 100%;
+}
+input {
+    margin: 10rpx 60rpx;
+    border-bottom: 1rpx solid rgb(214, 212, 212);
+}
+
+.placeholder {
+    font-size: 26rpx;
+}
+
+.button {
+    height: 70rpx;
+    width: 50%;
+    display: inline-block;
+    line-height: 70rpx;
+}
+map{
+    margin: 20rpx auto;
+    width: 90%;
+    height: 400rpx;
+}

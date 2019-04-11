@@ -1,5 +1,8 @@
 //index.js
 const app = getApp()
+const db = wx.cloud.database()
+const teacherList = db.collection('teacherList') //教师集合
+const _=db.command
 
 Page({
     data: {
@@ -11,6 +14,9 @@ Page({
 
         isTeacher: false,
         isStudent: false,
+        accountNum:'teacher01',//教师账号
+        passWord:123456,//教师密码
+
     },
     //学生弹窗
     student() {
@@ -21,7 +27,9 @@ Page({
     cancel() {
         this.setData({
             isStudent: false,
-            isTeacher: false
+            isTeacher: false,
+            accountNum:'',
+            passWord:null,
         })
     },
     //老师弹窗
@@ -30,15 +38,45 @@ Page({
             isTeacher: true
         })
     },
+    //教师登录
+    teacherLogin(){
+        console.log(this.data)
+        teacherList.where({
+            accountNum:_.eq(this.data.accountNum),
+            passWord: _.eq(Number.parseInt(this.data.passWord))
+        }).get().then(res => {
+            console.log(res.data[0])
+            if(res.data.length == 0){
+                wx.showModal({
+                    content: '输入的内容有误！请重新输入',
+                    showCancel: false
+                });
+            }else{
+                //跳转
+                wx.navigateTo({
+                    url: `../teacherIndex/teacherIndex?accountNum=${this.data.accountNum}&passWord=${this.data.passWord}`,
+                })
+            }
+        })
+    },
+
+    //学生登录
     studentLogin(){
-        wx.redirectTo({
+        wx.navigateTo({
             url: '../studentIndex/studentIndex',
         })
     },
-    teacherLogin(){
-
+    inputAccountNum:function(e){
+        this.setData({
+            accountNum:e.detail.value
+        })
     },
-
+    inputPassWord: function (e) {
+        this.setData({
+            passWord: e.detail.value
+        })
+    },
+    
 
     login() {
         wx.redirectTo({
