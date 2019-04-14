@@ -65,3 +65,8 @@ map{
     width: 90%;
     height: 400rpx;
 }
+.weui-cell_select{
+    width: 90%;
+    font-size: 26rpx;
+    margin: 10rpx 30rpx;
+}

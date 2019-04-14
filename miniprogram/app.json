@@ -7,7 +7,8 @@
         "pages/addFunction/addFunction",
         "pages/deployFunctions/deployFunctions",
         "pages/chooseLib/chooseLib",
-        "pages/teacherIndex/teacherIndex"
+        "pages/teacherIndex/teacherIndex",
+        "pages/teacherCourse/teacherCourse"
     ],
     "window": {
         "backgroundColor": "#eeeeee",
@@ -22,9 +23,9 @@
     },
     "debug": true,
     "sitemapLocation": "sitemap.json",
-    "permission":{
-        "scope.userLocation":{
-            "desc":"你的位置将用于定位"
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置将用于定位"
         }
     }
 }
