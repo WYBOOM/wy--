@@ -17,6 +17,8 @@ Page({
         accountNum:'teacher01',//教师账号
         passWord:123456,//教师密码
 
+        studentName:'李明', //学生姓名
+        studentId:201521113000, //学号
     },
     //学生弹窗
     student() {
@@ -30,6 +32,9 @@ Page({
             isTeacher: false,
             accountNum:'',
             passWord:null,
+            studentId:'',
+            studentName:null,
+
         })
     },
     //老师弹窗
@@ -63,7 +68,17 @@ Page({
     //学生登录
     studentLogin(){
         wx.navigateTo({
-            url: '../studentIndex/studentIndex',
+            url: `../studentIndex/studentIndex?studentId=${this.data.studentId}&studentName=${this.data.studentName}`,
+        })
+    },
+    inputStudentName: function (e) {
+        this.setData({
+            studentName: e.detail.value
+        })
+    },
+    inputStudentId: function (e) {
+        this.setData({
+            studentId: e.detail.value
         })
     },
     inputAccountNum:function(e){

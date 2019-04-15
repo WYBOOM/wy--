@@ -11,6 +11,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        options:null,
         accountNum: '',
         passWord: null,
         Data: {}, //教师数据
@@ -27,7 +28,7 @@ Page({
         circle: [], //显示的圆形
 
         distances:[20,50,100,200], //距离范围
-        distancesIndex:0,//当前距离
+        distancesIndex:0,//当前距离index
         
 
     },
@@ -85,7 +86,7 @@ Page({
             this.setData({
                 isCreate:true,
             })
-                console.log(res)
+            this.onLoad(this.data.options);
         }).catch(error=>{
             console.log(error);
         })
@@ -102,6 +103,7 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
+            options:options,
             accountNum: options.accountNum,
             passWord: options.passWord,
         })

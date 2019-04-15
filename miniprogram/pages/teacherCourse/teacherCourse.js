@@ -10,11 +10,17 @@ Page({
      * 页面的初始数据
      */
     data: {
+        isCreate:true,
         tabs: ["我要考勤","历史考勤"],
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
         courseData:{},//课程数据
+
+        distances: [20, 50, 100, 200], //距离范围
+        distancesIndex: 0,//当前距离index
+
+        checkInPassWord:1111,//考勤口令
     },
 
     tabClick: function (e) {
@@ -24,6 +30,22 @@ Page({
         });
     },
 
+    //改变半径
+    bindDistanceChange(e) {
+        this.setData({
+            distancesIndex: e.detail.value,
+        })
+    },
+    //开始考勤
+    checkOn(){
+
+    },
+
+    inputPassWord(e) {
+        this.setData({
+            checkInPassWord: e.detail.value
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -52,6 +74,18 @@ Page({
             console.log(error)
         })
         
+    },
+
+    //点击查看历史缺勤人员
+    tapItem(e){
+        console.log(e.currentTarget.dataset.text);
+        wx.setStorage({
+            key: "unusualPeopleList",
+            data: e.currentTarget.dataset.text
+        })
+        wx.navigateTo({
+            url: `../unusualPeopleList/unusualPeopleList`,
+        })
     },
 
     /**

@@ -1,0 +1,15 @@
+<!--miniprogram/pages/unusualPeopleList/unusualPeopleList.wxml-->
+<view class='content'>
+    <view wx:if="{{List.length==0}}">
+        <text>暂无数据~</text>
+    </view>
+    <view wx:else>
+        <view wx:for="{{List}}" wx:key="{{item.name}}">
+            <view class='item'>
+                <text>{{item.name}}</text>
+                <text style='position:relative;left:200rpx'>{{item.studentID}}</text>
+            </view>
+        </view>
+    </view>
+
+</view>

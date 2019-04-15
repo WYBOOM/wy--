@@ -46,8 +46,8 @@
     <view class='absolute' hidden="{{!isStudent}}">
         <view class='dialog'>
             <text style='font-size:29rpx;font-weight:500;margin:30rpx auto;'>请补充相关信息</text>
-            <input placeholder='姓名：' placeholder-class="placeholder"></input>
-            <input placeholder='学号：' placeholder-class="placeholder"></input>
+            <input placeholder='姓名：' placeholder-class="placeholder" value='' bindinput='inputStudentName'></input>
+            <input placeholder='学号：' placeholder-class="placeholder" value='' bindinput='inputStudentId'></input>
             <view style='margin:30rpx 0 -10rpx'>
                 <button catchtap='cancel' hover-class='buttonHover'>取消</button>
                 <button hover-class='buttonHover' catchtap='studentLogin'>登录</button>

@@ -10,7 +10,17 @@
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
             <view class="weui-tab__panel">
-                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <scroll-view class='content' scroll-y='true'>
+                        <view wx:for="{{studentData.myCourse}}" wx:key="{{item.courseName}}" catchtap='tapItem' data-text="{{item}}">
+                            <view wx:if="{{createCourse[index]!='null'}}" class='item'>
+                                <text style='width:30%;font-size:36rpx;font-weight:500'>{{item.className}}</text>
+                                <text style='width:25%;margin-left:20rpx;font-size:36rpx;font-weight:500;color:green'>{{item.courseName}}</text>
+
+                            </view>
+                        </view>
+                    </scroll-view>
+                </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 3}}">选项三的内容</view>

@@ -1,0 +1,14 @@
+/* miniprogram/pages/unusualPeopleList/unusualPeopleList.wxss */
+page {
+    height: 100%;
+    width: 100%;
+}
+.content{
+    height: 100%;
+    width:100%;
+}
+.item{
+    width:90%;
+    margin: 10rpx auto;
+    border-bottom: 2rpx solid black;
+}

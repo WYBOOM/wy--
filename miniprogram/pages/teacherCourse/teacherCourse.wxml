@@ -12,12 +12,31 @@
             </view>
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    <view>
-                        
+                    <view style='width:100%;height:100%'>
+                        <view style='margin-left:-300rpx'>考勤口令：</view>
+                        <input class='' style='border:8rpx solid green;width:70%;border-radius:10rpx;margin: 0 auto' bindinput='inputPassWord' value='{{checkInPassWord}}'></input>
+                        <view style='position:relative;left:-120rpx'>修改考勤半径：</view>
+                        <picker bindchange="bindDistanceChange" value="{{countryIndex}}" range="{{distances}}">
+                            <view class="weui-select weui-select_in-select-after">{{distances[distancesIndex]}}</view>
+                        </picker>
+                        <button type='primary' style='width:70%' bindtap='checkOn'>开始考勤</button>
                     </view>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>            
+                <view class="content" hidden="{{activeIndex != 1}}">
+                    <view wx:if="{{courseData.historyCheckOn.length==0||typeof(courseData.historyCheckOn)=='undefined'}}">
+                        <text>暂无数据</text>
+                    </view>
+                    <view wx:else style='width:100%'>
+                        <view wx:for="{{courseData.historyCheckOn}}" wx:key="{{item.checkOnTime}}" catchtap='tapItem' data-text="{{item.unusualPeopleList}}" class='item'>
+                            <text style='width:30%;font-size:36rpx;font-weight:500'>{{item.checkOnClassName}}</text>
+                            <text style='width:60%;font-size:25rpx;font-weight:500;color:rgb(179, 173, 173);margin:10rpx'>{{item.checkOnTime}}</text>
+                        </view>
+                    </view>
+                </view>
             </view>
         </view>
     </view>
+
+
+
 </view>
