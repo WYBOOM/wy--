@@ -21,6 +21,11 @@ Page({
         distancesIndex: 0,//当前距离index
 
         checkInPassWord:1111,//考勤口令
+
+        markers:[{
+            latitude:0,
+            longitude:0,
+        }],
     },
 
     tabClick: function (e) {
@@ -67,8 +72,10 @@ Page({
             this.setData({
                 courseData:res.data.createdCourse.filter(item=>
                     item.courseName == options.courseName
-                )[0]
+                )[0],
+                
             })
+          
             console.log(this.data.courseData)
         }).catch(error=>{
             console.log(error)
@@ -88,6 +95,13 @@ Page({
         })
     },
 
+    openMap(){
+        wx.openLocation({
+            latitude: this.data.courseData.location.latitude,
+            longitude: this.data.courseData.location.longitude,
+            scale: 18
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

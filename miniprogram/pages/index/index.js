@@ -70,6 +70,14 @@ Page({
         wx.navigateTo({
             url: `../studentIndex/studentIndex?studentId=${this.data.studentId}&studentName=${this.data.studentName}`,
         })
+        wx.setStorage({
+            key: 'studentId',
+            data: this.data.studentId,
+        })
+        wx.setStorage({
+            key: 'studentName',
+            data: this.data.studentName,
+        })
     },
     inputStudentName: function (e) {
         this.setData({

@@ -9,7 +9,8 @@
         "pages/chooseLib/chooseLib",
         "pages/teacherIndex/teacherIndex",
         "pages/teacherCourse/teacherCourse",
-        "pages/unusualPeopleList/unusualPeopleList"
+        "pages/unusualPeopleList/unusualPeopleList",
+        "pages/studentCheckOn/studentCheckOn"
     ],
     "window": {
         "backgroundColor": "#eeeeee",
