@@ -86,6 +86,7 @@ Page({
             this.setData({
                 isCreate:true,
             })
+            console.log(res)
             this.onLoad(this.data.options);
         }).catch(error=>{
             console.log(error);

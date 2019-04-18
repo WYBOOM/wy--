@@ -26,25 +26,36 @@ Page({
     tapItem2(e) {
         console.log(e.currentTarget.dataset.text)
         var studentId;
-        wx.getStorage({
-            key: 'studentId',
-            success: function(res) {
-                studentId = res.data;
-                wx.cloud.callFunction({
-                    // 云函数名称
-                    name: 'addStudentCourse',
-                    // 传给云函数的参数
-                    data: {
-                        course: e.currentTarget.dataset.text,
-                        studentId: studentId,
-                    },
-                    success(res) {
-                        console.log("OK!")
-                    },
-                    fail: console.error
-                })
-            },
+        var that = this;
+        wx.showModal({
+            title: '提示',
+            content: '确定要将该课程添加进我的课程吗？',
+            success(res) {
+                if (res.confirm) {
+                    wx.getStorage({
+                        key: 'studentId',
+                        success: function (res) {
+                            studentId = res.data;
+                            wx.cloud.callFunction({
+                                // 云函数名称
+                                name: 'addStudentCourse',
+                                // 传给云函数的参数
+                                data: {
+                                    course: e.currentTarget.dataset.text,
+                                    studentId: studentId,
+                                },
+                                complete: res => {
+                                    that.onLoad({ 1: 1 });
+                                },
+                            })
+                        },
+                    })
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
         })
+        
 
 
     },

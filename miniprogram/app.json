@@ -10,7 +10,8 @@
         "pages/teacherIndex/teacherIndex",
         "pages/teacherCourse/teacherCourse",
         "pages/unusualPeopleList/unusualPeopleList",
-        "pages/studentCheckOn/studentCheckOn"
+        "pages/studentCheckOn/studentCheckOn",
+        "pages/teacherCheckOn/teacherCheckOn"
     ],
     "window": {
         "backgroundColor": "#eeeeee",

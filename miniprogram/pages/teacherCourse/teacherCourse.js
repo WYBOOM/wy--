@@ -21,11 +21,7 @@ Page({
         distancesIndex: 0,//当前距离index
 
         checkInPassWord:1111,//考勤口令
-
-        markers:[{
-            latitude:0,
-            longitude:0,
-        }],
+        options:{},
     },
 
     tabClick: function (e) {
@@ -43,7 +39,26 @@ Page({
     },
     //开始考勤
     checkOn(){
-
+        var that = this;
+        wx.cloud.callFunction({
+            // 云函数名称
+            name: 'beginCheckOn',
+            // 传给云函数的参数
+            data: {
+                className:this.data.courseData.className,
+                courseName: this.data.courseData.courseName,
+                checkOnCode: this.data.checkInPassWord,
+                distance:this.data.distances[this.data.distancesIndex],
+                latitude: this.data.courseData.location.latitude,
+                longitude: this.data.courseData.location.longitude,
+            },
+            complete: res => {
+                that.onLoad(this.data.options);
+                wx.navigateTo({
+                    url: `../teacherCheckOn/teacherCheckOn?courseName=${this.data.courseData.courseName}&className=${this.data.courseData.className}`,
+                })
+            },
+        })
     },
 
     inputPassWord(e) {
@@ -56,6 +71,9 @@ Page({
      */
     onLoad: function (options) {
         var that = this;
+        this.setData({
+            options:options
+        })
         wx.getSystemInfo({
             success: function (res) {
                 that.setData({
