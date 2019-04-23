@@ -1,0 +1,1 @@
+{"_id":"201521113000","studentId":{"$numberLong":"201521113000"},"studentName":"李明","myCourse":[{"courseName":"数字电路","className":"电科1511"},{"className":"电科1512","courseName":"大学英语"}],"myClass":"电科1511"}
