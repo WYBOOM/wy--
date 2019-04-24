@@ -5,14 +5,54 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        courseName:"",
+        className:'',
+        checkOnPeopleList:[],
+    },
+    endCheckOn(){
+        wx.cloud.callFunction({
+            // 云函数名称
+            name: 'endCheckOn',
+            // 传给云函数的参数
+            data: {
+                className: this.data.className,
+                courseName: this.data.courseName,
+                
+            },
+            complete: res => {
+                wx.navigateBack({
+                    delta: 2
+                })
+            },
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            courseName:options.courseName,
+            className:options.className,
+        })
+        setInterval(()=>{
+            wx.cloud.callFunction({
+                // 云函数名称
+                name: 'getCheckOnPeopleList',
+                // 传给云函数的参数
+                data: {
+                    className: this.data.className,
+                    courseName: this.data.courseName,
+                },
+                complete: res => {
+                    console.log(this.data.checkOnPeopleList);
+                    this.setData({
+                        checkOnPeopleList: res.result.data[0].checkOnPeopleList
+                    })
+                },
+            })
+        },1000)
+        
     },
 
     /**

@@ -1,0 +1,6 @@
+{"_id":"半导体","checkOnPeopleList":[{"name":"李明","studentID":"201521113000"},{"studentID":"201521113001","name":"小明"}],"courseName":"半导体","className":"电科1511","isCheckOn":false,"checkOnCode":1111.0,"distance":20.0,"latitude":22.54836,"longitude":114.13166}
+{"_id":"大学物理","courseName":"大学物理","className":"电科1512","isCheckOn":false,"distance":20.0,"latitude":22.54836,"longitude":114.13166}
+{"_id":"大学英语","courseName":"大学英语","className":"电科1512","isCheckOn":false,"distance":20.0,"latitude":22.54836,"longitude":114.13166}
+{"_id":"数字电路","checkOnPeopleList":[],"courseName":"数字电路","className":"电科1511","isCheckOn":true,"checkOnCode":1111.0,"distance":20.0,"latitude":22.54836,"longitude":114.13166}
+{"_id":"模拟电路","checkOnPeopleList":[{"name":"李明","studentID":"201521113000"},{"studentID":"201521113001","name":"小明"}],"courseName":"模拟电路","className":"电科1512","isCheckOn":false,"checkOnCode":"11123213","distance":20.0,"latitude":22.54836,"longitude":114.13166}
+{"_id":"高等数学","courseName":"高等数学","className":"电科1512","isCheckOn":false,"distance":20.0,"latitude":22.54836,"longitude":114.13166}

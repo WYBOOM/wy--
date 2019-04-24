@@ -10,17 +10,16 @@ exports.main = async (event, context) => {
     return new Promise((resolve, reject) => {
         resolve(
             db.collection('courseList')
-            .where({
-                courseName:event.courseName,
-            })
+                .where({
+                    courseName: event.courseName,
+                })
                 .update({
                     data: {
-                        className:event.className,
-                        checkOnCode: event.checkOnCode,
-                        distance: event.distance,
-                        latitude: event.latitude,
-                        longitude: event.longitude,
-                        isCheckOn:true
+                        isCheckOn: false,
+                        checkOnPeopleList:[],
+                        checkOnCode:1111,
+                        distance:20,
+                        
                     }
                 })
                 // .get().then(res => console.log("okok" + res.data.studentId))

@@ -1,2 +1,16 @@
 <!--miniprogram/pages/teacherCheckOn/teacherCheckOn.wxml-->
-<text>miniprogram/pages/teacherCheckOn/teacherCheckOn.wxml</text>
+<scroll-view class='content' scroll-y='true'>
+    <button type='primary' style='width:90%;margin-top:20rpx' catchtap='endCheckOn'>停止考勤</button>
+    <view style='font-size:25rpx;margin:15rpx auto;width:200rpx'>已考勤人员名单</view>
+    <view wx:if="{{checkOnPeopleList.length==0}}">
+        <text>暂无数据~</text>
+    </view>
+    <view wx:else>
+        <view wx:for="{{checkOnPeopleList}}" wx:key="{{item.name}}">
+            <view class='item'>
+                <text>{{item.name}}</text>
+                <text style='position:relative;left:200rpx'>{{item.studentID}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

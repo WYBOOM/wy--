@@ -6,7 +6,7 @@ const _ = db.command
 
 Page({
     data: {
-        tabs: ["我的课程", "全部课程"],
+        tabs: ["我的课程", "全部课程","我的课程表"],
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
@@ -19,9 +19,6 @@ Page({
         wx.navigateTo({
             url: `../studentCheckOn/studentCheckOn?courseName=${e.currentTarget.dataset.text.courseName}`,
         })
-        // db.collection('studentList').where({
-        //     studentId: 201521113000
-        // }).get().then(res=>console.log(res.data))
     },
     tapItem2(e) {
         console.log(e.currentTarget.dataset.text)
@@ -55,8 +52,6 @@ Page({
                 }
             }
         })
-        
-
 
     },
     onLoad: function(options) {
@@ -70,7 +65,7 @@ Page({
             }
         });
 
-        studentList.doc('201521113000').get().then(res => {
+        studentList.doc(options.studentId).get().then(res => {
             this.setData({
                 studentData: res.data,
             })
@@ -81,7 +76,6 @@ Page({
                 courseList: res.data
             })
         })
-
     },
     tabClick: function(e) {
         this.setData({

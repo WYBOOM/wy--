@@ -1,1 +1,24 @@
 /* miniprogram/pages/studentCheckOn/studentCheckOn.wxss */
+page{
+ width:100%;
+ height:100%   
+}
+
+text{
+    font-size: 26rpx;
+    margin: 10rpx;
+}
+input{
+    width:80%;
+    margin: 10rpx auto;
+    border:2rpx solid rgb(8, 207, 8);
+    border-radius: 3rpx;
+}
+map{
+   width:80%;
+    margin: 10rpx auto;
+}
+button{
+       width:60%;
+    margin: 40rpx auto;
+}

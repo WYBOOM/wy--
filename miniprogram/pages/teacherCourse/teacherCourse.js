@@ -22,6 +22,7 @@ Page({
 
         checkInPassWord:1111,//考勤口令
         options:{},
+        msg:''
     },
 
     tabClick: function (e) {
@@ -93,8 +94,14 @@ Page({
                 )[0],
                 
             })
+            if (typeof (this.data.courseData.historyCheckOn) == 'undefined'||this.data.courseData.historyCheckOn.length == 0){
+                this.setData({
+                    msg:'暂无数据~'
+                })
+            }
           
             console.log(this.data.courseData)
+            console.log(typeof (this.data.courseData.historyCheckOn) == 'undefined')
         }).catch(error=>{
             console.log(error)
         })

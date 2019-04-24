@@ -1,1 +1,24 @@
 /* miniprogram/pages/teacherCheckOn/teacherCheckOn.wxss */
+/* miniprogram/pages/teacherIndex/teacherIndex.wxss */
+
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-color:#DDDDDD;
+}
+.item{
+    width:90%;
+    margin: 10rpx auto;
+    border-bottom: 2rpx solid black;
+}
+.button {
+    height: 70rpx;
+    width: 50%;
+    display: inline-block;
+    line-height: 70rpx;
+}

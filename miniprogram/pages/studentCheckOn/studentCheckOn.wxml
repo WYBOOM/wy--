@@ -1,2 +1,8 @@
 <!--miniprogram/pages/studentCheckOn/studentCheckOn.wxml-->
-<text>miniprogram/pages/studentCheckOn/studentCheckOn.wxml</text>
+<view>
+<text>请输入考勤口令：</text>
+<input bindinput='inputCode'></input>
+<text>考勤地点：</text>
+<map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" scale="18" circles='{{circle}}' show-location='true'></map>
+<button type='primary' bindtap='checkOn'>开始考勤</button>
+</view>
