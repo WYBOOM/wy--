@@ -14,10 +14,12 @@ Page({
 
         studentData: {}, //当前数据
         courseList: [], //课程集合
+        studentId:'',
+        studentName:'',
     },
     tapItem(e) {
         wx.navigateTo({
-            url: `../studentCheckOn/studentCheckOn?courseName=${e.currentTarget.dataset.text.courseName}`,
+            url: `../studentCheckOn/studentCheckOn?courseName=${e.currentTarget.dataset.text.courseName}&studentId=${this.data.studentId}&studentName=${this.data.studentName}`,
         })
     },
     tapItem2(e) {
@@ -55,6 +57,11 @@ Page({
 
     },
     onLoad: function(options) {
+        console.log(options)
+        this.setData({
+            studentId:options.studentId,
+            studentName:options.studentName,
+        })
         var that = this;
         wx.getSystemInfo({
             success: function(res) {

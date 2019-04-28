@@ -13,7 +13,8 @@ Page({
         checkOnCode:null,
         myLongitude:0,
         myLatitude:0,
-
+        studentId:'',
+        studentName:'',
     },
     inputCode: function (e) {
         this.setData({
@@ -26,22 +27,39 @@ Page({
             name: 'studentCheckOn',
             // 传给云函数的参数
             data: {
-                checkOnCode:this.data.checkOnCode
+                checkOnCode:this.data.checkOnCode,
+                courseName:this.data.courseData.courseName,
+                latitude: this.data.myLatitude,
+                longitude: this.data.myLongitude,
+                studentId:this.data.studentId,
+                studentName:this.data.studentName,
+
             },
             complete: res => {
                 console.log(res);
-                // this.setData({
-                //     checkOnPeopleList: res.result.data[0].checkOnPeopleList
-                // })
                 if(res.result == false){
                     wx.showModal({
                         title: '提示',
-                        content: '考勤口令错误',
+                        content: '考勤口令错误或课程未在考勤中！',
                         showCancel:false,
                         success(res) {
                             if (res.confirm) {
                                 console.log('用户点击确定')
                             }
+                        }
+                    })
+                }else{
+                    wx.showModal({
+                        title: '提示',
+                        content: '考勤完成',
+                        showCancel: false,
+                        success:res=> {
+                            if (res.confirm) {
+                                console.log('用户点击确定')
+                            }
+                            wx.navigateBack({
+                                url: `../studentIndex/studentIndex?studentId=${this.data.studentId}&studentName=${this.data.studentName}`
+                            })
                         }
                     })
                 }
@@ -82,14 +100,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(options)
+        this.setData({
+            studentId: options.studentId,
+            studentName: options.studentName,
+        })
         wx.cloud.callFunction({
             // 云函数名称
             name: 'getCheckOnPeopleList',
             // 传给云函数的参数
             data: {
-                courseName: this.data.courseName,
-                latitude:this.data.myLatitude,
-                longitude:this.data.myLongitude,
+                courseName: options.courseName,
+
             },
             complete: res => {
                 console.log(res.result.data[0])
@@ -114,7 +136,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+       
     },
 
     /**
@@ -123,9 +145,9 @@ Page({
     onShow: function () {
         wx.getLocation({
             type: 'gcj02',
-            success(res) {
+            success: res => {
                 this.setData({
-                    myLongitude: res, longitude,
+                    myLongitude: res.longitude,
                     myLatitude: res.latitude,
                 })
             }

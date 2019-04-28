@@ -1,0 +1,187 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'E:\\nodejs\\node.exe',
+1 verbose cli   'E:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of C:\Users\WY\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\WY\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'n', null ]
+7 verbose cache add spec n
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'n',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'n',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed n@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for n
+11 info addNameTag [ 'n', 'latest' ]
+12 silly mapToRegistry name n
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'n',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'n',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/n
+17 verbose addNameTag registry:https://registry.npmjs.org/n not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/n
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 10:25:20
+21 verbose request id c61bedd93f9b1ab5
+22 http request GET https://registry.npmjs.org/n
+23 http 200 https://registry.npmjs.org/n
+24 verbose headers { date: 'Sat, 27 Apr 2019 02:25:24 GMT',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'transfer-encoding': 'chunked',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'set-cookie': [ '__cfduid=d54b2817d3fc8f7dbb594587ca4a182631556331924; expires=Sun, 26-Apr-20 02:25:24 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+24 verbose headers   'cf-cache-status': 'HIT',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'cf-ray': '4cdd587ddf12b0f8-HKG',
+24 verbose headers   etag: 'W/"236b75ab42446426a63c299e5381fb53"',
+24 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 verbose headers   'last-modified': 'Sun, 07 Apr 2019 04:55:52 GMT',
+24 verbose headers   vary: 'accept-encoding, accept',
+24 verbose headers   'x-amz-meta-rev': '369-5fb557fbed2fc234a7471b20aae28748',
+24 verbose headers   server: 'cloudflare',
+24 verbose headers   'content-encoding': 'gzip' }
+25 silly get cb [ 200,
+25 silly get   { date: 'Sat, 27 Apr 2019 02:25:24 GMT',
+25 silly get     'content-type': 'application/json',
+25 silly get     'transfer-encoding': 'chunked',
+25 silly get     connection: 'keep-alive',
+25 silly get     'set-cookie': [ '__cfduid=d54b2817d3fc8f7dbb594587ca4a182631556331924; expires=Sun, 26-Apr-20 02:25:24 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+25 silly get     'cf-cache-status': 'HIT',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'cf-ray': '4cdd587ddf12b0f8-HKG',
+25 silly get     etag: 'W/"236b75ab42446426a63c299e5381fb53"',
+25 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+25 silly get     'last-modified': 'Sun, 07 Apr 2019 04:55:52 GMT',
+25 silly get     vary: 'accept-encoding, accept',
+25 silly get     'x-amz-meta-rev': '369-5fb557fbed2fc234a7471b20aae28748',
+25 silly get     server: 'cloudflare',
+25 silly get     'content-encoding': 'gzip' } ]
+26 verbose get saving n to C:\Users\WY\AppData\Roaming\npm-cache\registry.npmjs.org\n\.cache.json
+27 verbose correctMkdir C:\Users\WY\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+28 verbose makeDirectory C:\Users\WY\AppData\Roaming\npm-cache creation not in flight; initializing
+29 verbose makeCacheDir UID & GID are irrelevant on win32
+30 silly addNameTag next cb for n with tag latest
+31 silly addNamed n@3.0.2
+32 verbose addNamed "3.0.2" is a plain semver version for n
+33 silly mapToRegistry name n
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'n',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'n',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/n
+38 verbose addRemoteTarball https://registry.npmjs.org/n/-/n-3.0.2.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/n/-/n-3.0.2.tgz',
+39 verbose addRemoteTarball   '957637705f6a9ca5213887cfc187e0c1c30a020a' ]
+40 info retry fetch attempt 1 at 10:25:22
+41 info attempt registry request try #1 at 10:25:22
+42 http fetch GET https://registry.npmjs.org/n/-/n-3.0.2.tgz
+43 http fetch 200 https://registry.npmjs.org/n/-/n-3.0.2.tgz
+44 silly fetchAndShaCheck shasum 957637705f6a9ca5213887cfc187e0c1c30a020a
+45 verbose addTmpTarball C:\Users\WY\AppData\Local\Temp\npm-13332-e0b1196b\registry.npmjs.org\n\-\n-3.0.2.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for n@3.0.2
+47 verbose correctMkdir C:\Users\WY\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+48 silly cache afterAdd n@3.0.2
+49 verbose afterAdd C:\Users\WY\AppData\Roaming\npm-cache\n\3.0.2\package\package.json not in flight; writing
+50 verbose correctMkdir C:\Users\WY\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+51 verbose afterAdd C:\Users\WY\AppData\Roaming\npm-cache\n\3.0.2\package\package.json written
+52 silly install resolved [ { name: 'n',
+52 silly install resolved     description: 'Interactively Manage All Your Node Versions',
+52 silly install resolved     version: '3.0.2',
+52 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+52 silly install resolved     homepage: 'https://github.com/tj/n',
+52 silly install resolved     bugs: { url: 'https://github.com/tj/n/issues' },
+52 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+52 silly install resolved     keywords:
+52 silly install resolved      [ 'nvm',
+52 silly install resolved        'node',
+52 silly install resolved        'version',
+52 silly install resolved        'manager',
+52 silly install resolved        'switcher',
+52 silly install resolved        'node',
+52 silly install resolved        'binary',
+52 silly install resolved        'env' ],
+52 silly install resolved     bin: { n: './bin/n' },
+52 silly install resolved     repository: { type: 'git', url: 'git://github.com/tj/n.git' },
+52 silly install resolved     preferGlobal: true,
+52 silly install resolved     os: [ '!win32' ],
+52 silly install resolved     engines: { node: '*' },
+52 silly install resolved     license: 'MIT',
+52 silly install resolved     gitHead: '7e3e199815e938c0a2ff1bdbccd03cba1ba5b54e',
+52 silly install resolved     _id: 'n@3.0.2',
+52 silly install resolved     _npmVersion: '6.4.1',
+52 silly install resolved     _nodeVersion: '10.15.3',
+52 silly install resolved     _npmUser: { name: 'shadowspawn', email: 'npm_j@ruru.gen.nz' },
+52 silly install resolved     dist:
+52 silly install resolved      { integrity: 'sha512-mZKG3QjwpuQTHkJ8IJeiOfvOsfYSZ6hvJ3A0qn8ZnBU2zIqPBSTlFV9cJOCfJrBZIbeqndY+1INljhSxX2/tLg==',
+52 silly install resolved        shasum: '957637705f6a9ca5213887cfc187e0c1c30a020a',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/n/-/n-3.0.2.tgz',
+52 silly install resolved        fileCount: 5,
+52 silly install resolved        unpackedSize: 30463,
+52 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcqYLVCRA9TVsSAnZWagAAYboP/1D78qw5klU2IsUv93DW\nR/SEZrRZQSNQxON+vxueBayuL/uzQEcRaeYl/KS+FfbhRJvPnSS0jzhT4CgC\nxG4hBBO6cq9ECl0eeQD13X89g4L/dHlqDFwaxBj2GMTK75I+fK9SDRiDG361\nm3ry02IJ757rXd+gFgHcJutZ34I4KUG3JRkJdcMtOGfpAFtlseMA3j+k9wiZ\n8tMmel/AMxmWSiG4Epx0tRM/Cs4VUzFwMUo8d/nSARLnxu+A7/4xGFEzMfRQ\nUVxCnOmTSWhtNXdjkkFjQBgE+gjCJqB29DY0/ggfQ/Fo1zvg4UvjbCV27Ypv\nrKMviV7fC2yztbrSNnkutZ6B7UWb9w7AXc6Ki+t29oIhxLbrbA5ACdF9tphE\njkiqkbxNFhdD983oFO1oVwrY885XivqeQoC5sECMdj+LBBv0hIoeo4N7SHX5\nPxjZg/1sQITWLb2g/QZUCiakBNKkix7wghCN7ixPFvGFGW6WtxTXiWAKDLJR\niCWv54JyylDjJTZtlvwc0qbhznf92+h5BVsx28AGpeY5cQAycMDUvo5l8PPl\njYYqxRg3R5uVZxQ8kucYAatyaNpDeIMd1z2xA4UVtmBRjdy1qHhgV6K1CY5f\nr46Hv8NJqXdjrI767UDMdoGFCH2Qan450IQ+4oKNFVKJ6KHr9DMvIYDj6I27\nw4Jg\r\n=iSU5\r\n-----END PGP SIGNATURE-----\r\n' },
+52 silly install resolved     maintainers:
+52 silly install resolved      [ [Object],
+52 silly install resolved        [Object],
+52 silly install resolved        [Object],
+52 silly install resolved        [Object],
+52 silly install resolved        [Object],
+52 silly install resolved        [Object],
+52 silly install resolved        [Object] ],
+52 silly install resolved     directories: {},
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 's3://npm-registry-packages',
+52 silly install resolved        tmp: 'tmp/n_3.0.2_1554612948899_0.3210231854763801' },
+52 silly install resolved     _hasShrinkwrap: false,
+52 silly install resolved     _shasum: '957637705f6a9ca5213887cfc187e0c1c30a020a',
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/n/-/n-3.0.2.tgz',
+52 silly install resolved     _from: 'n@latest' } ]
+53 info install n@3.0.2 into C:\Users\WY\AppData\Roaming\npm
+54 info installOne n@3.0.2
+55 verbose installOne of n to C:\Users\WY\AppData\Roaming\npm not in flight; installing
+56 verbose correctMkdir C:\Users\WY\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory C:\Users\WY\AppData\Roaming\npm-cache\_locks creation not in flight; initializing
+58 verbose makeCacheDir UID & GID are irrelevant on win32
+59 verbose lock using C:\Users\WY\AppData\Roaming\npm-cache\_locks\n-6bcd6c7b56315330.lock for C:\Users\WY\AppData\Roaming\npm\node_modules\n
+60 verbose unlock done using C:\Users\WY\AppData\Roaming\npm-cache\_locks\n-6bcd6c7b56315330.lock for C:\Users\WY\AppData\Roaming\npm\node_modules\n
+61 verbose stack Error: Unsupported
+61 verbose stack     at checkPlatform (E:\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:47:14)
+61 verbose stack     at Array.<anonymous> (E:\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+61 verbose stack     at LOOP (E:\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+61 verbose stack     at E:\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+61 verbose stack     at checkEngine (E:\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:26:10)
+61 verbose stack     at Array.<anonymous> (E:\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+61 verbose stack     at LOOP (E:\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+61 verbose stack     at chain (E:\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+61 verbose stack     at E:\nodejs\node_modules\npm\lib\install.js:1038:5
+61 verbose stack     at E:\nodejs\node_modules\npm\lib\utils\locker.js:39:7
+62 verbose pkgid n@3.0.2
+63 verbose cwd C:\Users\WY\Desktop\毕业设计\miniprogram\wy-wechat\cloudfunctions\studentCheckOn
+64 error Windows_NT 10.0.17134
+65 error argv "E:\\nodejs\\node.exe" "E:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n"
+66 error node v4.4.3
+67 error npm  v2.15.1
+68 error code EBADPLATFORM
+69 error notsup Unsupported
+69 error notsup Not compatible with your operating system or architecture: n@3.0.2
+69 error notsup Valid OS:    !win32
+69 error notsup Valid Arch:  any
+69 error notsup Actual OS:   win32
+69 error notsup Actual Arch: x64
+70 verbose exit [ 1, true ]

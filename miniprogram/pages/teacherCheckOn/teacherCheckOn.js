@@ -8,6 +8,7 @@ Page({
         courseName:"",
         className:'',
         checkOnPeopleList:[],
+        accountNum:''
     },
     endCheckOn(){
         wx.cloud.callFunction({
@@ -17,9 +18,10 @@ Page({
             data: {
                 className: this.data.className,
                 courseName: this.data.courseName,
-                
+                accountNum: this.data.accountNum,
             },
             complete: res => {
+                console.log(res)
                 wx.navigateBack({
                     delta: 2
                 })
@@ -34,6 +36,7 @@ Page({
         this.setData({
             courseName:options.courseName,
             className:options.className,
+            accountNum: options.accountNum,
         })
         setInterval(()=>{
             wx.cloud.callFunction({

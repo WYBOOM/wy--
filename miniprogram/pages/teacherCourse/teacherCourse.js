@@ -16,7 +16,6 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0,
         courseData:{},//课程数据
-
         distances: [20, 50, 100, 200], //距离范围
         distancesIndex: 0,//当前距离index
 
@@ -56,7 +55,7 @@ Page({
             complete: res => {
                 that.onLoad(this.data.options);
                 wx.navigateTo({
-                    url: `../teacherCheckOn/teacherCheckOn?courseName=${this.data.courseData.courseName}&className=${this.data.courseData.className}`,
+                    url: `../teacherCheckOn/teacherCheckOn?courseName=${this.data.courseData.courseName}&className=${this.data.courseData.className}&accountNum=${this.data.options.accountNum}`,
                 })
             },
         })
